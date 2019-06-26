@@ -59,11 +59,11 @@
                        </div>
 
                    </div>
-                    <div class="callback-btn d-flex justify-content-center align-items-center">
+                    <button class="callback-btn d-flex justify-content-center align-items-center">
                         обратная связь
 
 
-                    </div>
+                    </button>
 
                 </div>
             </div>
@@ -105,7 +105,7 @@
                         </div>
                         <form class="w-100 d-flex flex-column justify-content-between" enctype="multipart/form-data"  method="post" action="./email.php" id="form" name="form">
                             <input type="text" name="name" placeholder="Ваше имя" >
-                            <input type="text" name="tel" placeholder="Введите телефон" >
+                            <input type="text" name="tel" placeholder="Введите телефон" required >
                             <input type="text" name="peoples" placeholder="Количество человек">
                             <input type="text" name="month" placeholder="Месяц выезда">
 
@@ -115,6 +115,41 @@
                     </div>
                 </div>
             </div>
+    <!--Modal-->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="second-row-right-block  d-flex justify-content-center align-items-center p-2   modal-content" >
+                <img src="img/close.png" data-dismiss="modal" class="position-absolute" style="top: 0; right: -35px">
+                <div class="green-alpha d-flex justify-content-center align-items-center w-100 p-2 h-100 ">
+
+                    <div class="border-white d-flex flex-column justify-content-around w-100 h-100 ">
+                        <div class="block-1 text-right d-flex justify-content-end">
+                            <span></span>
+                            <p>ЗАПОЛНИТЕ
+                                ФОРМУ </p>
+                        </div>
+                        <div class="block-2 d-flex justify-content-between">
+                            <img src="img/form_img.png">
+                            <p class="text-right">МЫ ПОДБЕРЕМ ВАМ САМЫЕ
+                                ИНТЕРЕСНЫЕ ПРЕДЛОЖЕНИЯ
+                                ПО БОЛГАРИИ</p>
+                        </div>
+                        <form class="w-100 d-flex flex-column justify-content-between" enctype="multipart/form-data"  method="post" action="./email.php" id="form2" name="form">
+                            <input type="text" name="name" placeholder="Ваше имя" required>
+                            <input type="text" name="tel" placeholder="Введите телефон" required>
+
+
+                        </form>
+                        <BUTTON type="submit" form="form2">ОТПРАВИТЬ</BUTTON>
+                        <img src="img/лого.png">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--end Modal-->
 </div>
             <img class="position-absolute big-img  d-md-none d-lg-block " src="img/big.png">
         </div>
@@ -218,7 +253,7 @@
                                 <h3>ГУДАУТА ГОСТЕВОЙ ДОМ </h3>
                                 <p>«ЮЛИЯ»</p>
                             </a>
-                            <a class="list-group-item flex-fill flex-fill d-flex flex-column justify-content-center align-items-center" id="list-7-list" data-toggle="list" href="#list-7" role="tab" aria-controls="5">
+                            <a class="list-group-item flex-fill flex-fill d-flex flex-column justify-content-center align-items-center" id="list-7-list" data-toggle="list" href="#list-7" role="tab" aria-controls="5" style="background:none">
                                 <h3>СУХУМ ГОСТЕВОЙ ДОМ</h3>
                                 <p>«БУГЕНВИЛИЯ»</p>
                             </a>
@@ -294,7 +329,7 @@
                                                </div>
 
                                            </div>
-                                           <button>узнать цены и варианты</button>
+                                           <button data-toggle="modal" data-target="#myModal">узнать цены и варианты</button>
                                        </div>
                                    </card>
                                </div>
@@ -429,7 +464,7 @@
                                                 </div>
 
                                             </div>
-                                            <button>узнать цены и варианты</button>
+                                            <button data-toggle="modal" data-target="#myModal">узнать цены и варианты</button>
                                         </div>
                                     </card>
                                 </div>
@@ -570,7 +605,7 @@
                                                 </div>
 
                                             </div>
-                                            <button>узнать цены и варианты</button>
+                                            <button data-toggle="modal" data-target="#myModal">узнать цены и варианты</button>
                                         </div>
                                     </card>
                                 </div>
@@ -708,7 +743,7 @@
                                                 </div>
 
                                             </div>
-                                            <button>узнать цены и варианты</button>
+                                            <button data-toggle="modal" data-target="#myModal">узнать цены и варианты</button>
                                         </div>
                                     </card>
                                 </div>
@@ -846,7 +881,7 @@
                                                 </div>
 
                                             </div>
-                                            <button>узнать цены и варианты</button>
+                                            <button data-toggle="modal" data-target="#myModal">узнать цены и варианты</button>
                                         </div>
                                     </card>
                                 </div>
@@ -959,7 +994,7 @@
                                 УЛ. ОЛЬШЕВСКОГО, 28</p>
                             <p class="w-75">220030, Г.МИНСК,<br>
                                 УЛ. КОМСОМОЛЬСКАЯ, 13</p>
-                            <button class="w-75">ЗАКАЗАТЬ ЗВОНОК</button>
+                            <button class="w-75"  data-toggle="modal" data-target="#myModal">ЗАКАЗАТЬ ЗВОНОК</button>
 
                         </div>
                     </div>
@@ -1054,7 +1089,7 @@
                 ГАВАНЬ»
             </p>
             <p>от 285 УЕ.<br><span>с человека за 10 ночей</span></p>
-            <button>узнать цены и варианты</button>
+            <button data-toggle="modal" data-target="#myModal">узнать цены и варианты</button>
         </div>
 
     </card>
@@ -1065,7 +1100,7 @@
                 АВТОБУС
             </p>
             <p>от 320 ЕВРО<br><span>с человека за 10 ночей</span></p>
-            <button>узнать цены и варианты</button>
+            <button data-toggle="modal" data-target="#myModal">узнать цены и варианты</button>
         </div>
 
     </card>
@@ -1076,7 +1111,7 @@
                 АВИА
             </p>
             <p>от 485 ЕВРО<br><span>с человека за 14 ночей</span></p>
-            <button>узнать цены и варианты</button>
+            <button data-toggle="modal" data-target="#myModal">узнать цены и варианты</button>
         </div>
 
     </card>
@@ -1087,7 +1122,7 @@
                 АВИА
             </p>
             <p>от 485 ЕВРО<br><span>с человека за 14 ночей</span></p>
-            <button>узнать цены и варианты</button>
+            <button data-toggle="modal" data-target="#myModal">узнать цены и варианты</button>
         </div>
 
     </card>
@@ -1096,7 +1131,7 @@
             <p>ТИН ПАЛАС
                 АВИА</p>
             <p>от 485 ЕВРО<br><span>с человека за 14 ночей</span></p>
-            <button>узнать цены и варианты</button>
+            <button data-toggle="modal" data-target="#myModal">узнать цены и варианты</button>
         </div>
 
     </card>
